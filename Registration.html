@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Health Care</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+    
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+    
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 600px) {
+        .col-25,
+        .col-75,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h1 class="w3-padding-64"><b>HEALTH<br>CARE</b></h1>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>HEALTH CARE</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- my profile -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h3 class="w3-xxxlarge w3-text-red"><b>Registration Form.</b></h3>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <div class="container">
+                <form action="/action_page.php" target="_blank">
+
+                    <div class="w3-section">
+                        <label> First Name :</label>
+                        <input class="w3-input w3-border" type="text" name="First Name" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Last Name : </label>
+                        <input class="w3-input w3-border" type="text" name="Last Name" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Speciality : </label>
+                        <input class="w3-input w3-border" type="text" name="Speciality" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Address : </label>
+                        <input class="w3-input w3-border" type="text" name="Address" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Age : </label>
+                        <input class="w3-input w3-border" type="text" name="Age" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Department : </label>
+                        <input class="w3-input w3-border" type="text" name="Department" required>
+                    </div>
+                    <div class="w3-section">
+                        <label>Availability : </label>
+                        <input class="w3-input w3-border" type="text" name="Availability" required>
+                    </div>
+
+                    <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Submit</button>
+                    <span class="psw">Click here to <a href="Login.html">LOGIN</a></span>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+    <!-- End page content -->
+
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+</body>
+
+</html>
